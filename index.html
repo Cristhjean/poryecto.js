@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="productos.json"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div id="saludo-navbar"></div>
+                <h1>Logo</h1>
+                <ul class="nav-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><button onclick="toggleCarrito()" class="boton-carrito">Carrito</button></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><button id="toggleModo" onclick="toggleModoOscuro()">Modo Oscuro</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="productos">
+        <div class="producto">
+            <img src="xx" alt="Producto 1">
+            <p>Producto 1 - $10</p>
+            <select id="cantidad-producto-1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button onclick="agregarAlCarrito(1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="xx" alt="Producto 2">
+            <p>Producto 2 - $15</p>
+            <select id="cantidad-producto-2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button onclick="agregarAlCarrito(2)">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <div id="carrito-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarCarrito()">&times;</span>
+            <h2>Carrito</h2>
+            <button onclick="borrarTodo()" class="boton-borrar-todo">Borrar Todo</button> 
+            <ul id="lista-carrito"></ul>
+            <p>Total: $<span id="total-carrito">0</span></p>
+            <button onclick="comprar()" class="boton-comprar">Comprar</button>
+            <div id="formulario-pago" style="display: none;">
+                <h2>Datos Personales y Medio de Pago</h2>
+                <input type="text" id="nombre" placeholder="Nombre">
+                <input type="email" id="email" placeholder="Correo Electrónico">
+                <input type="text" id="tarjeta" placeholder="Número de Tarjeta">
+                <input type="text" id="fecha-exp" placeholder="Fecha de Expiración (MM/AA)">
+                <input type="text" id="cvv" placeholder="CVV">
+                <button onclick="realizarPago()">Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Tienda Online</p>
+        </div>
+    </footer>
+    <script src="scrit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

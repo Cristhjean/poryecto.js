@@ -1,0 +1,23 @@
+[
+    {
+    "id": 1,
+    "nombre": "evee",
+    "precio": 1000,
+    "descripcion": "Descripción del producto 1",
+    "imagen": "/img/eevee.avif"
+    },
+    {
+    "id": 2,
+    "nombre": "eeve",
+    "precio": 150,
+    "descripcion": "Descripción del producto 2",
+    "imagen": "/img/eevee.avif"
+    },
+    {
+    "id": 3,
+    "nombre": "eevePRO",
+    "precio": 20000,
+    "descripcion": "Descripción del producto 3",
+    "imagen": "/img/eevee.avif"
+    }
+]
